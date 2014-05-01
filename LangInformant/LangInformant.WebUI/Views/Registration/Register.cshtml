@@ -1,0 +1,21 @@
+﻿@model LangInformant.Domain.Entities.User
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+@using (Html.BeginForm())
+{
+    <p>User Name: @Html.TextBoxFor(x => x.UserName)</p>
+    <p>Email: @Html.TextBoxFor(x => x.Email)</p>
+    <p> Password: @Html.TextBoxFor(x => x.Password)</p>
+    <p> StreetAddress: @Html.TextBoxFor(x => x.StreetAddress)</p>
+    <p> City: @Html.TextBoxFor(x => x.City)</p>
+    <p> State: @Html.TextBoxFor(x => x.State)</p>
+    <p> ZipCode: @Html.TextBoxFor(x => x.ZipCode)</p>
+    <p> Country: @Html.TextBoxFor(x => x.Country)</p>
+    <input type="submit" value="Register" />
+    
+}
+
