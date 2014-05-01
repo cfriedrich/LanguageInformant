@@ -1,0 +1,47 @@
+﻿@model LangInformant.Domain.Entities.Word
+
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
+
+@{
+    ViewBag.Title = "WordDetails";
+}
+
+<h2>WordDetails</h2>
+
+<fieldset>
+    <legend>Word</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SoundVol)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SoundVol)
+    </div>
+    <div class="display-label">
+        @Html.DisplayFor(model => model.Language)
+    </div>
+    <div class="display-label">
+        @foreach (var m in Model.Meanings)
+        {
+            <p>m.Name</p>
+        }   
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "EditWord", new { Model.WordID }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
