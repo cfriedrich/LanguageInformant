@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ILessonRepository.cs" />
     <Compile Include="Abstract\IMeaningRepository.cs" />
     <Compile Include="Abstract\IWordRepository.cs" />
+    <Compile Include="Concrete\EFLessonRepository.cs" />
     <Compile Include="Concrete\EFMeaningRepository.cs" />
     <Compile Include="Concrete\EFWordRepository.cs" />
     <Compile Include="Concrete\LangInformantDbContext.cs" />
