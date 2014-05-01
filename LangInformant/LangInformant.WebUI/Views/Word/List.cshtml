@@ -1,0 +1,53 @@
+﻿@model IEnumerable<LangInformant.Domain.Entities.Word>
+
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddWord")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoundVol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Language)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoundVol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td>
+            @Html.ActionLink("Edit Word", "EditWord", new { item.WordID }) |
+            @Html.ActionLink("Details", "WordDetails", new { item.WordID }) |
+            @Html.ActionLink("Delete", "DeleteWord", new { item.WordID })
+        </td>
+    </tr>
+}
+
+</table>

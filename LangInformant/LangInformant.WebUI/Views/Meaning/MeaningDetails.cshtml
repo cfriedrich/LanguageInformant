@@ -1,0 +1,29 @@
+﻿@model LangInformant.Domain.Entities.Meaning
+
+@{
+    ViewBag.Title = "MeaningDetails";
+}
+
+<h2>MeaningDetails</h2>
+
+<fieldset>
+    <legend>Meaning</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "EditMeaning", new { Model.MeaningID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

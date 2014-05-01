@@ -1,0 +1,48 @@
+﻿@model LangInformant.Domain.Entities.Word
+
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
+
+@{
+    ViewBag.Title = "AddWord";
+}
+
+@using (Html.BeginForm()) {
+
+
+    <fieldset>
+        <legend>Word</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SoundVol)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SoundVol)
+
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "List")
+</div>
+
