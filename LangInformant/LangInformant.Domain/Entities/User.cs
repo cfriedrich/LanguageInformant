@@ -33,6 +33,7 @@ namespace LangInformant.Domain.Entities
         public string Country { get; set; }
         public bool IsAdmin { get; set; }
 
+        public bool IsLoggedIn { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
     }
 }

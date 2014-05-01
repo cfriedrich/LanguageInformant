@@ -124,6 +124,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeaningController.cs" />
     <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Controllers\WordController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -186,6 +187,7 @@
     <Content Include="Views\Meaning\DeleteMeaning.cshtml" />
     <Content Include="Views\Meaning\MeaningDetails.cshtml" />
     <Content Include="Views\Word\Index.cshtml" />
+    <Content Include="Views\Registration\Register.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
